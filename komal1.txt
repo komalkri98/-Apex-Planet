@@ -1,0 +1,3 @@
+function showAlert() {
+    alert("Thank you for shopping with us! Enjoy your fashion journey 💖");
+}
