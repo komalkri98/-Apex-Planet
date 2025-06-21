@@ -1,0 +1,134 @@
+body{
+  font-family: Arial, sans-serif;
+  background:linear-gradient(180deg, #fa2020, #030204);
+  color: #000;
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  position: fixed;    
+  top: 0;              
+  left: 0;              
+  width: 100%;          
+  display: flex;
+  justify-content: center;
+  background:linear-gradient(180deg, #fa2020, #030204);
+  padding: 20px;
+  flex-wrap: wrap;
+  z-index: 1000;      
+}
+nav a {
+  color:#fff;
+  text-decoration: none;
+  margin:10px 33px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+}
+.glass-box{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  box-sizing: border-box;
+  width: 50%;
+  min-height: 600px;
+}
+.quiz-container{
+  text-align: center;
+}
+.question{
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+.options{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.option{
+  padding: 12px;
+  border: 2px solid #803d6f;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.option:hover{
+  background: linear-gradient(180deg, #ef0909, #000000d2);
+  color: #ffffff;
+}
+.result{
+  font-size: 1.4em;
+  margin-top: 20px;
+  display: none;
+  color: #000;
+}
+.restart-btn{
+  background-color:#5c0404;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+.restart-btn:hover{
+  background-color: #020c17;
+}
+.joke-box{
+  text-align: center;
+}
+.joke-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+#get-joke-btn{
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  background-color: 	#5c0404;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#get-joke-btn:hover{
+  background-color:#000000;
+}
+#joke-display{
+  margin-top: 25px;
+  font-size: 1.2em;
+  color:#000000;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;       
+  width: 100%;    
+  color: #fff;
+  background-color:linear-gradient(180deg, #fa2020, #030204)	; 
+  text-align: center;     
+  padding: 15px 0;    
+  z-index: 1000;          
+}

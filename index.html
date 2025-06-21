@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Task 2</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 3</title>
+  <link rel="stylesheet" href="style .css" />
 </head>
 <body>
   <nav>
@@ -12,33 +12,25 @@
     <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
-  <main class="grid-container">
-    <div class="form-wrapper">
-      <h2>Contact Form</h2>
-      <form id="contactForm" action="#" method="POST" novalidate>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" />
-        <div id="nameError" class="error-message">Please enter your name.</div>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" />
-        <div id="emailError" class="error-message">Please enter a valid email address.</div>
-        
-        <input type="submit" value="Submit" />
-        <div id="submitMessage" class="success-message" style="display:none;"></div>
-      </form>
+  <div class="main-container">
+    <div class="quiz-container glass-box">
+      <div class="question">Question will appear here</div>
+      <div class="options"></div>
+      <div class="result">
+        Correct Answer: <span id="score">0</span><br />
+        Wrong answers: <span id="wrong">0</span>
+      </div>
+      <button class="restart-btn">Restart Quiz</button>
     </div>
-
-    <div class="todo-wrapper">
-      <h2>To-Do List</h2>
-      <input type="text" id="todoInput" placeholder="Add a new task" />
-      <button id="addTodo">Add</button>
-      <ul id="todoList"></ul>
+    <div class="joke-box glass-box">
+      <h3>Joke Section</h3>
+      <button id="get-joke-btn">Get Joke</button>
+      <div id="joke-display"></div>
     </div>
-  </main>
-  <script src="validation.js"></script>
-  <footer>
-    <p>&copy; Komal</p>
-  </footer>
+     <footer>
+      <p>&copy; Komal..</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
-</html>index
+</html>
