@@ -1,94 +1,63 @@
-const quizData = [
-    {
-        question: "Where am I doing Summer internship?",
-        options: ["TechNova", "Apex Planet", "CodeCraft", "DevHub"],
-        answer: "Apex Planet"
-    },
-    {
-        question: "Internship in which topic?",
-        options: ["App Dev", "Machine Learning", "Web Dev", "Game Dev"],
-        answer: "Web Dev"
-    },
-    {
-        question: "What is the task number?",
-        options: ["1", "2", "3", "4"],
-        answer: "3"
-    },
-    {
-        question: "What is the duration of internship?",
-        options: ["30 days", "45 days", "60 days", "90 days"],
-        answer: "45 days"
-    },
-    {
-        question: "What is square root 64?",
-        options: ["6", "8", "10", "12"],
-        answer: "8"
-    }
-];
-let currentQuestion = 0;
-let score = 0;
-const questionEl = document.querySelector('.question');
-const optionsEl = document.querySelector('.options');
-const resultEl = document.querySelector('.result');
-const scoreEl = document.getElementById('score');
-const wrongEl = document.getElementById('wrong');
-const restartBtn = document.querySelector('.restart-btn');
+document.addEventListener("DOMContentLoaded", () => {
+  const topNavBtns = document.querySelectorAll(".top-nav-btn");
+  const sideNavLinks = document.querySelectorAll(".side-nav-link");
+  const contentSections = document.querySelectorAll(".content-section");
+  const body = document.body;
 
-function loadQuestion() {
-    if (currentQuestion >= quizData.length) {
-        endQuiz();
-        return;
-    }
-    const currentQuiz = quizData[currentQuestion];
-    questionEl.textContent = currentQuiz.question;
-    optionsEl.innerHTML = '';
-    currentQuiz.options.forEach(option => {
-        const button = document.createElement('button');
-        button.classList.add('option');
-        button.textContent = option;
-        button.onclick = () => checkAnswer(option);
-        optionsEl.appendChild(button);
+  const todoForm = document.getElementById("todo-form");
+  const todoInput = document.getElementById("todo-input");
+  const todoList = document.getElementById("todo-list");
+
+  function showSection(id) {
+    contentSections.forEach((section) => {
+      section.classList.toggle("active", section.id === id);
     });
-}
-function checkAnswer(selectedOption) {
-    if (selectedOption === quizData[currentQuestion].answer) {
-        score++;
-    }
-    currentQuestion++;
-    loadQuestion();
-}
-function endQuiz() {
-    questionEl.style.display = 'none';
-    optionsEl.style.display = 'none';
-    resultEl.style.display = 'block';
-    scoreEl.textContent = score;
-    wrongEl.textContent = quizData.length - score;
-    restartBtn.style.display = 'inline-block';
-}
-restartBtn.addEventListener('click', () => {
-    currentQuestion = 0;
-    score = 0;
+  }
 
-    questionEl.style.display = 'block';
-    optionsEl.style.display = 'flex';
-    resultEl.style.display = 'none';
-    restartBtn.style.display = 'none';
+  topNavBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      topNavBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    loadQuestion();
-});
-loadQuestion();
-const getJokeBtn = document.getElementById('get-joke-btn');
-const jokeDisplay = document.getElementById('joke-display');
-getJokeBtn.addEventListener('click', async () => {
-    jokeDisplay.textContent = 'Loading joke...';
-    try {
-        const response = await fetch('https://icanhazdadjoke.com/', {
-            headers: { Accept: 'application/json' }
+      if (btn.dataset.target === "portfolio") {
+        body.classList.remove("todo-active");
+        showSection("about");
+        sideNavLinks.forEach((link, idx) => {
+          link.classList.toggle("active", idx === 0);
         });
-        if (!response.ok) throw new Error('Failed to fetch joke');
-        const data = await response.json();
-        jokeDisplay.textContent = data.joke;
-    } catch (error) {
-        jokeDisplay.textContent = 'Sorry, could not fetch a joke right now.';
-    }
+      } else if (btn.dataset.target === "todo") {
+        body.classList.add("todo-active");
+        showSection("todo");
+        sideNavLinks.forEach((link) => link.classList.remove("active"));
+      }
+    });
+  });
+
+  sideNavLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      sideNavLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+      showSection(link.dataset.target);
+    });
+  });
+
+  if (todoForm) {
+    todoForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const task = todoInput.value.trim();
+      if (!task) return;
+      const li = document.createElement("li");
+      li.textContent = task;
+
+      li.addEventListener("click", () => {
+        li.classList.toggle("completed");
+      });
+      li.addEventListener("dblclick", () => {
+        li.remove();
+      });
+      todoList.appendChild(li);
+      todoInput.value = "";
+    });
+  }
 });

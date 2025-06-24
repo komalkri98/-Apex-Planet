@@ -1,36 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Task 3</title>
-  <link rel="stylesheet" href="style .css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Task 4</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-  <div class="main-container">
-    <div class="quiz-container glass-box">
-      <div class="question">Question will appear here</div>
-      <div class="options"></div>
-      <div class="result">
-        Correct Answer: <span id="score">0</span><br />
-        Wrong answers: <span id="wrong">0</span>
-      </div>
-      <button class="restart-btn">Restart Quiz</button>
-    </div>
-    <div class="joke-box glass-box">
-      <h3>Joke Section</h3>
-      <button id="get-joke-btn">Get Joke</button>
-      <div id="joke-display"></div>
-    </div>
-     <footer>
-      <p>&copy; Komal..</p>
+    <nav class="top-nav">
+        <button class="px-4 py-2 font-semibold text-gray-800 bg-gray-200 rounded-lg"
+            onclick="location.href='index.html'">Portfolio</button>
+        <button class="px-4 py-2 font-semibold text-gray-800 hover:bg-gray-200 rounded-lg"
+            onclick="location.href='todo.html'">To-Do</button>
+        <button class="px-4 py-2 font-semibold text-gray-800 hover:bg-gray-200 rounded-lg"
+            onclick="location.href='shop.html'">Shop</button>
+    </nav>
+    <nav class="side-nav">
+        <a href="#" class="side-nav-link active" data-target="about">About</a>
+        <a href="#" class="side-nav-link" data-target="skills">Skills</a>
+        <a href="#" class="side-nav-link" data-target="projects">Projects</a>
+        <a href="#" class="side-nav-link" data-target="contact">Contact Me</a>
+    </nav>
+    <main>
+        <section id="about" class="content-section active">
+            <div class="rounded-box about">
+                <h1>Komal...</h1>
+                <p class="subtitle typing">~ Exploring | Learning | Evolving ~</p>
+                <h2>About Me</h2>
+                <hr />
+                <p>
+                    I'm a Computer Science and Engineering student, currently exploring the world of coding and
+                    development. While I'm still figuring things out, I'm actively learning and growing through classes,
+                    personal projects, and online resources. I regularly use AI tools to speed up my learning, try out
+                    new ideas, and boost my productivity. Driven by curiosity and a genuine passion for growth, I'm
+                    always open to opportunities that help me improve and put my skills into real-world use.
+                </p>
+            </div>
+        </section>
+        <section id="skills" class="content-section">
+            <div class="rounded-box">
+                <h2>My Skills</h2>
+                <hr>
+                <ul class="skills-list">
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python(beginner)</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Markdown</li>
+                    <li>Canva</li>
+                    <li>MS Office</li>
+                    <li>MS Excel</li>
+                    <li>MS Word</li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects" class="content-section">
+            <div class="rounded-box">
+                <h2>Projects</h2>
+                <hr>
+                <div class="project">
+                    <u>
+                        <h3>#Joke Generator</h3>
+                    </u>
+                    <p>A fun web app that fetches and displays random jokes. Built with HTML, CSS, and JavaScript.</p>
+                    <ul>
+                        <li>Fetches jokes from an API dynamically</li>
+                        <li>User-friendly interface with refresh button</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <u>
+                        <h3>#To-Do List</h3>
+                    </u>
+                    <p>A simple interactive to-do list app for managing daily tasks. Developed using HTML, CSS, JS.</p>
+                    <ul>
+                        <li>Add and delete tasks as completed</li>
+                        <li>Responsive design for mobile and desktop using flexbox</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <u>
+                        <h3>#Portfolio Website</h3>
+                    </u>
+                    <p>My personal website showcasing skills, projects, and contact info. Created with HTML, CSS, JS.
+                    </p>
+                    <ul>
+                        <li>Clean, modern, responsive layout</li>
+                        <li>Smooth navigation(upper and side navigationbutton) and contact form validation</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <u>
+                        <h3>#Product Listing Page</h3>
+                    </u>
+                    <p>A dynamic product listing interface with sorting and filtering features, built using HTML, CSS,
+                        and JavaScript.
+                    </p>
+                    <ul>
+                        <li>Sorts products by price and rating</li>
+                        <li>Responsive layout with a clean UI</li>
+                        <li>Efficient DOM manipulation for dynamic product updates</li>
+                        <li>Filters by product type (e.g., electronics, clothing, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="content-section">
+            <div class="rounded-box">
+                <h2>Contact Me</h2>
+                <hr>
+                <ul class="skills-list">
+                    <li>Email: <a href="mailto:komalkumari70301@gmail.com">komalkumari70301gmail.com</a></li>
+                    <li>GitHub: <a href="https://github.com/komalkri98" target="_blank">github.com/komalkri98</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/komal-kumari-531a43314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank">linkedin.com/in/komal-kumari</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="todo" class="content-section">
+            <div class="rounded-box todo-box">
+                <h1>To-Do List</h1>
+                <form id="todo-form">
+                    <input type="text" id="todo-input" placeholder="Add new task..." autocomplete="off" />
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="todo-list"></ul>
+                <p><small><u>Click</u> task to mark complete, <u>Double click</u> to remove.</small></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; komal..</p>
     </footer>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
