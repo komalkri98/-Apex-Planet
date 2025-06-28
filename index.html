@@ -1,142 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Task 4</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Task 4</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zefani&display=swap" rel="stylesheet">
 </head>
-
-<body>
-    <nav class="top-nav">
-        <button class="px-4 py-2 font-semibold text-gray-800 bg-gray-200 rounded-lg"
-            onclick="location.href='index.html'">Portfolio</button>
-        <button class="px-4 py-2 font-semibold text-gray-800 hover:bg-gray-200 rounded-lg"
-            onclick="location.href='todo.html'">To-Do</button>
-        <button class="px-4 py-2 font-semibold text-gray-800 hover:bg-gray-200 rounded-lg"
-            onclick="location.href='shop.html'">Shop</button>
-    </nav>
-    <nav class="side-nav">
-        <a href="#" class="side-nav-link active" data-target="about">About</a>
-        <a href="#" class="side-nav-link" data-target="skills">Skills</a>
-        <a href="#" class="side-nav-link" data-target="projects">Projects</a>
-        <a href="#" class="side-nav-link" data-target="contact">Contact Me</a>
-    </nav>
-    <main>
-        <section id="about" class="content-section active">
-            <div class="rounded-box about">
-                <h1>Komal...</h1>
-                <p class="subtitle typing">~ Exploring | Learning | Evolving ~</p>
-                <h2>About Me</h2>
-                <hr />
-                <p>
-                    I'm a Computer Science and Engineering student, currently exploring the world of coding and
-                    development. While I'm still figuring things out, I'm actively learning and growing through classes,
-                    personal projects, and online resources. I regularly use AI tools to speed up my learning, try out
-                    new ideas, and boost my productivity. Driven by curiosity and a genuine passion for growth, I'm
-                    always open to opportunities that help me improve and put my skills into real-world use.
-                </p>
-            </div>
-        </section>
-        <section id="skills" class="content-section">
-            <div class="rounded-box">
-                <h2>My Skills</h2>
-                <hr>
-                <ul class="skills-list">
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python(beginner)</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Markdown</li>
-                    <li>Canva</li>
-                    <li>MS Office</li>
-                    <li>MS Excel</li>
-                    <li>MS Word</li>
-                </ul>
-            </div>
-        </section>
-        <section id="projects" class="content-section">
-            <div class="rounded-box">
-                <h2>Projects</h2>
-                <hr>
-                <div class="project">
-                    <u>
-                        <h3>#Joke Generator</h3>
-                    </u>
-                    <p>A fun web app that fetches and displays random jokes. Built with HTML, CSS, and JavaScript.</p>
-                    <ul>
-                        <li>Fetches jokes from an API dynamically</li>
-                        <li>User-friendly interface with refresh button</li>
-                    </ul>
+<body class="page-body">
+    <header class="nav">
+        <nav class="nav-bar">
+            <button class="nav-link nav-link-active" onclick="location.href='index.html'">Home</button>
+            <button class="nav-link" onclick="location.href='shop.html'">Shop</button>
+            <button class="nav-link" onclick="location.href='cart.html'">Cart</button>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/free-psd/black-friday-sale-social-media-cover-design-template_47987-25244.jpg?ga=GA1.1.1241891096.1749143131&semt=ais_hybrid&w=740" alt="Electronics Sale">
+                    <div class="carousel-caption">Big Sale on Electronics!</div>
                 </div>
-                <div class="project">
-                    <u>
-                        <h3>#To-Do List</h3>
-                    </u>
-                    <p>A simple interactive to-do list app for managing daily tasks. Developed using HTML, CSS, JS.</p>
-                    <ul>
-                        <li>Add and delete tasks as completed</li>
-                        <li>Responsive design for mobile and desktop using flexbox</li>
-                    </ul>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/premium-photo/bold-red-yellow-sale-banner-with-apparel-footwear-graphics_1018465-11072.jpg?ga=GA1.1.1927152715.1748870915&semt=ais_hybrid&w=740" alt="Clothing Sale">
+                    <div class="carousel-caption">Trendy Clothing at Great Prices!</div>
                 </div>
-                <div class="project">
-                    <u>
-                        <h3>#Portfolio Website</h3>
-                    </u>
-                    <p>My personal website showcasing skills, projects, and contact info. Created with HTML, CSS, JS.
-                    </p>
-                    <ul>
-                        <li>Clean, modern, responsive layout</li>
-                        <li>Smooth navigation(upper and side navigationbutton) and contact form validation</li>
-                    </ul>
-                </div>
-                <div class="project">
-                    <u>
-                        <h3>#Product Listing Page</h3>
-                    </u>
-                    <p>A dynamic product listing interface with sorting and filtering features, built using HTML, CSS,
-                        and JavaScript.
-                    </p>
-                    <ul>
-                        <li>Sorts products by price and rating</li>
-                        <li>Responsive layout with a clean UI</li>
-                        <li>Efficient DOM manipulation for dynamic product updates</li>
-                        <li>Filters by product type (e.g., electronics, clothing, etc.)</li>
-                    </ul>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/free-vector/horizontal-sale-banner-template-world-book-day-celebration_23-2150184563.jpg?ga=GA1.1.1927152715.1748870915&semt=ais_hybrid&w=740" alt="Books Sale">
+                    <div class="carousel-caption">Explore Our Book Collection!</div>
                 </div>
             </div>
-        </section>
-        <section id="contact" class="content-section">
-            <div class="rounded-box">
-                <h2>Contact Me</h2>
-                <hr>
-                <ul class="skills-list">
-                    <li>Email: <a href="mailto:komalkumari70301@gmail.com">komalkumari70301gmail.com</a></li>
-                    <li>GitHub: <a href="https://github.com/komalkri98" target="_blank">github.com/komalkri98</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/komal-kumari-531a43314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            target="_blank">linkedin.com/in/komal-kumari</a></li>
-                </ul>
-            </div>
-        </section>
-        <section id="todo" class="content-section">
-            <div class="rounded-box todo-box">
-                <h1>To-Do List</h1>
-                <form id="todo-form">
-                    <input type="text" id="todo-input" placeholder="Add new task..." autocomplete="off" />
-                    <button type="submit">Add</button>
-                </form>
-                <ul id="todo-list"></ul>
-                <p><small><u>Click</u> task to mark complete, <u>Double click</u> to remove.</small></p>
-            </div>
+            <button class="carousel-control prev">❮</button>
+            <button class="carousel-control next">❯</button>
+        </div>
+        <section class="welcome-section">
+            <h1>Welcome to Our Store</h1>
+            <p>Discover the best deals on Electronics, Clothing, and Books. Shop now and enjoy a seamless shopping experience!</p>
+            <button class="shop-now-button" onclick="location.href='shop.html'">Shop Now</button>
         </section>
     </main>
-    <footer>
-        <p>&copy; komal..</p>
+    <footer class="footer">
+        <p>© komal..</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>

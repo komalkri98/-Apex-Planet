@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +7,12 @@
     <link rel="stylesheet" href="shop.css">
     <link href="https://fonts.googleapis.com/css2?family=Zefani&display=swap" rel="stylesheet">
 </head>
-
 <body class="page-body">
     <header class="nav">
         <nav class="nav-bar">
-            <button class="nav-link" onclick="location.href='index.html'">Portfolio</button>
-            <button class="nav-link" onclick="location.href='todo.html'">To-Do</button>
+            <button class="nav-link" onclick="location.href='index.html'">Home</button>
             <button class="nav-link nav-link-active" onclick="location.href='shop.html'">Shop</button>
+            <button class="nav-link" onclick="location.href='cart.html'">Cart</button>
         </nav>
     </header>
     <main class="main-content">
@@ -44,12 +42,18 @@
                         <button id="apply-filter" class="apply-button">Apply Filter</button>
                     </div>
                 </div>
-                <div>
-                    <h3 class="filter-heading">Sort By</h3>
-                    <select id="sort-options" class="sort-dropdown">
-                        <option value="price-desc">Price (High - Low)</option>
-                        <option value="price-asc">Price (Low - High)</option>
-                    </select>
+                <div class="search-sort-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+                        <button id="search-button" class="search-button">Search</button>
+                    </div>
+                    <div class="sort-box">
+                        <h3 class="filter-heading">Sort By</h3>
+                        <select id="sort-options" class="sort-dropdown">
+                            <option value="price-desc">Price (High - Low)</option>
+                            <option value="price-asc">Price (Low - High)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <button id="reset-filter" class="reset-button">Reset Filters</button>
@@ -57,9 +61,8 @@
         <div id="product-list" class="product-grid"></div>
     </main>
     <footer class="footer">
-        <p>&copy; Abhiii..</p>
+        <p>© Komal..</p>
     </footer>
     <script src="shop.js"></script>
 </body>
-
 </html>
